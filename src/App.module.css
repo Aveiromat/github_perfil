@@ -1,0 +1,26 @@
+.inputFixed {
+    position: absolute;
+    width: 30vw;
+    height: 5vh;
+    border-radius: 2px;
+    font-size: medium;
+}
+
+.input {
+    display: flex;
+    justify-content: center;
+    padding-top: 32px;
+    background-color: var(--corPrincipal);
+}
+
+.inputCenter {
+    align-self: center;
+    width: 32vw;
+    height: 4vw;
+    text-align: center;
+    font-size: 2vw;
+}
+
+.loading {
+    background-color: var(--corPrincipal);
+}

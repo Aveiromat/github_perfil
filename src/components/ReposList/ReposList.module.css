@@ -25,3 +25,13 @@
     padding: 8px;
     text-decoration: none;
 }
+
+h1.error {
+    display: flex;
+    justify-content: center;
+}
+
+h1.loadingScreen {
+    display: flex;
+    justify-content: center;
+}

@@ -3,6 +3,7 @@ import { useState } from "react";
 import Perfil from "./components/Perfil";
 import Formulario from "./components/Formulario";
 import ReposList from "./components/ReposList";
+import styles from './App.module.css';
 
 function App() {
   const [formularioEstaVisivel, setFormularioEstaVisivel] = useState(true);
@@ -10,14 +11,20 @@ function App() {
 
   return (
     <>
-      <input type="text" onBlur={(e) => setNomeUsuario(e.target.value)} />
 
-      {nomeUsuario.length > 4 && (
-        <>
-          <Perfil nomeUsuario={nomeUsuario} />
-          <ReposList nomeUsuario={nomeUsuario} />
-        </>
+      <>
+        <div className={styles.input}>
+          <input placeholder="Search" className={styles.inputCenter} type="text" onBlur={(e) => setNomeUsuario(e.target.value)} />
+        </div>
+        <Perfil nomeUsuario={nomeUsuario} />
+      </>
+
+      {nomeUsuario.length >= 3 && (
+
+        <ReposList nomeUsuario={nomeUsuario} />
+
       )}
+
 
       {/* {formularioEstaVisivel && ( //mount /  onmount
         <Formulario />
